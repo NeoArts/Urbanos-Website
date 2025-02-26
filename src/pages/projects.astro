@@ -1,0 +1,275 @@
+---
+import Layout from '../ui/layouts/Layout.astro';
+import Container from '../ui/components/Container.astro';
+import img_home_1 from '../assets/img/img_home_1.jpg'
+import ProjectsGrid from '../ui/components/ProjectsGrid.astro';
+
+const projects = [
+    {
+        id: 1,
+        title: "Ciudadela San Juan Bosco",
+        type: "Desarrollo",
+        description: "Desarrollo de vivienda, comercio y equipamientos institucionales.",
+        location: "Bogotá",
+        year: "2023",
+        image: img_home_1,
+        slug: "ciudadela-san-juan-bosco"
+    },
+    {
+        id: 2,
+        title: "Ciudad La Salle",
+        type: "Desarrollo",
+        description: "Proyecto de renovación urbana con usos mixtos, incluyendo vivienda, comercio y educación.",
+        location: "Bogotá",
+        year: "2024",
+        image: img_home_1,
+        slug: "ciudad-la-salle"
+    },
+    {
+        id: 3,
+        title: "Plan Parcial Tintalito - Mazuera",
+        type: "Desarrollo",
+        description: "Desarrollo urbano planificado.",
+        location: "Bogotá",
+        year: "2023",
+        image: img_home_1,
+        slug: "plan-parcial-tintalito-mazuera"
+    },
+    {
+        id: 4,
+        title: "Plan Parcial El Chanco II",
+        type: "Desarrollo",
+        description: "Implementación de planificación territorial.",
+        location: "Bogotá",
+        year: "2024",
+        image: img_home_1,
+        slug: "plan-parcial-el-chanco-ii"
+    },
+    {
+        id: 5,
+        title: "Plan Parcial San Hilario",
+        type: "Desarrollo",
+        description: "Proyecto de planificación urbana.",
+        location: "Bogotá",
+        year: "2023",
+        image: img_home_1,
+        slug: "plan-parcial-san-hilario"
+    },
+    {
+        id: 6,
+        title: "Ciudadela Nuevo Salitre",
+        type: "Renovación",
+        description: "Plan de renovación urbana en predios industriales.",
+        location: "Bogotá",
+        year: "2023",
+        image: img_home_1,
+        slug: "ciudadela-nuevo-salitre"
+    },
+    {
+        id: 7,
+        title: "El Orfebre",
+        type: "Renovación",
+        description: "Proyecto de renovación con determinantes urbanísticas.",
+        location: "Chapinero, Bogotá",
+        year: "2024",
+        image: img_home_1,
+        slug: "el-orfebre"
+    },
+    {
+        id: 8,
+        title: "Plan Parcial Avenida Colón",
+        type: "Renovación",
+        description: "Gestión y formulación de renovación urbana.",
+        location: "Bogotá",
+        year: "2023",
+        image: img_home_1,
+        slug: "plan-parcial-avenida-colon"
+    },
+    {
+        id: 9,
+        title: "Plan Parcial Cartón Colombia",
+        type: "Renovación",
+        description: "Transformación de predios comerciales e industriales.",
+        location: "Av. Las Américas, Bogotá",
+        year: "2024",
+        image: img_home_1,
+        slug: "plan-parcial-carton-colombia"
+    },
+    {
+        id: 10,
+        title: "Centro Don Bosco",
+        type: "Consultoría",
+        description: "Supervisión técnica para construcción y entrega de cesiones.",
+        location: "Bogotá",
+        year: "2023",
+        image: img_home_1,
+        slug: "centro-don-bosco"
+    },
+    {
+        id: 11,
+        title: "Office Depot",
+        type: "Consultoría",
+        description: "Interventoría de obras y licencias de urbanismo en Bogotá y Cali.",
+        location: "México – Colombia",
+        year: "2024",
+        image: img_home_1,
+        slug: "office-depot"
+    },
+    {
+        id: 12,
+        title: "Clínica La Inmaculada",
+        type: "Consultoría",
+        description: "Diseño arquitectónico y Plan de Regularización.",
+        location: "Bogotá",
+        year: "2023",
+        image: img_home_1,
+        slug: "clinica-la-inmaculada"
+    },
+    {
+        id: 13,
+        title: "Colegios San Bartolomé La Merced y Jhon Cabot",
+        type: "Consultoría",
+        description: "Estudio de reforzamiento estructural y licencias de construcción.",
+        location: "Bogotá",
+        year: "2024",
+        image: img_home_1,
+        slug: "colegios-san-bartolome-la-merced-jhon-cabot"
+    },
+    {
+        id: 14,
+        title: "Proyecto Urbano en Mosquera",
+        type: "Inmobiliario",
+        description: "Desarrollo de 2,500 viviendas y comercio zonal.",
+        location: "Cundinamarca",
+        year: "2023",
+        image: img_home_1,
+        slug: "proyecto-urbano-en-mosquera"
+    },
+    {
+        id: 15,
+        title: "Proyecto en Funza",
+        type: "Inmobiliario",
+        description: "Implementación y formulación de plan parcial para Corona Colcerámica.",
+        location: "Cundinamarca",
+        year: "2024",
+        image: img_home_1,
+        slug: "proyecto-en-funza"
+    },
+    {
+        id: 16,
+        title: "Proyecto en Sabaneta",
+        type: "Inmobiliario",
+        description: "Planificación y urbanismo para predios industriales.",
+        location: "Antioquia",
+        year: "2023",
+        image: img_home_1,
+        slug: "proyecto-en-sabaneta"
+    }
+];
+
+let selectedFilter = 'Todos';
+---
+
+<Layout>
+    <section class="relative pt-[100px] dark:bg-gray-900">
+        <div class="w-full bg-black py-16">
+            <div class="px-4 lg:px-6">
+                <div class="text-center mx-auto animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <h1 class="text-3xl lg:text-5xl font-black text-white mb-6">Nuestros <span class="text-[#ffa12a]">Proyectos</span></h1>
+                    <p class="text-lg text-gray-300 text-left border-l-4 border-[#ffa12a] pl-4 mx-auto max-w-2xl">Explora nuestra experiencia en la formulación, gestión y ejecución de planes parciales, urbanismo y consultorías en el desarrollo territorial. A través de soluciones estratégicas, transformamos entornos urbanos para un crecimiento sostenible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative dark:bg-gray-900">
+        <Container className="py-10 px-4 lg:px-6">
+
+            <div class="flex flex-wrap gap-4 mb-8 animate-fade-up opacity-0 [--animation-delay:400ms]">
+                <button class="filter-btn px-6 py-2 border-2 border-[#ffa12a] bg-[#ffa12a] text-white font-semibold rounded-lg hover:bg-[#ff9011] transition-colors duration-300" data-filter="Todos">
+                    Todos
+                </button>
+                <button class="filter-btn px-6 py-2 border-2 border-[#ffa12a] text-[#ffa12a] font-semibold rounded-lg hover:bg-[#ffa12a] hover:text-white transition-colors duration-300" data-filter="Desarrollo">
+                    Planes Parciales de Desarrollo
+                </button>
+                <button class="filter-btn px-6 py-2 border-2 border-[#ffa12a] text-[#ffa12a] font-semibold rounded-lg hover:bg-[#ffa12a] hover:text-white transition-colors duration-300" data-filter="Renovación">
+                    Planes Parciales de Renovación Urbana
+                </button>
+                <button class="filter-btn px-6 py-2 border-2 border-[#ffa12a] text-[#ffa12a] font-semibold rounded-lg hover:bg-[#ffa12a] hover:text-white transition-colors duration-300" data-filter="Consultoría">
+                    Interventorías y Consultorías
+                </button>
+                <button class="filter-btn px-6 py-2 border-2 border-[#ffa12a] text-[#ffa12a] font-semibold rounded-lg hover:bg-[#ffa12a] hover:text-white transition-colors duration-300" data-filter="Inmobiliario">
+                    Urbanismo y Desarrollo Inmobiliario
+                </button>
+            </div>
+
+            <ProjectsGrid projects={projects} />
+            <div class="text-center max-w-4xl mx-auto mt-40">
+                <h2 class="text-3xl lg:text-4xl font-black bg-gradient-to-r from-[#ffa12a] to-[#ff9011] text-transparent bg-clip-text mb-6 animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">¿Te Interesa Algún Proyecto?</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-12 animate-fade-up opacity-0 [--animation-delay:400ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">Nuestro equipo está listo para brindarte más información y asesorarte en tu próximo proyecto</p>
+                
+                <div class="grid md:grid-cols-2 gap-4 mb-12 px-4">
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-right opacity-0 [--animation-delay:600ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="w-16 h-16 bg-[#ffa12a]/10 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffa12a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold dark:text-white text-center">Consulta con Expertos</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-center">Agenda una llamada personalizada con nuestros especialistas en urbanismo</p>
+                            <a href="/contact-us" class="mt-4 px-6 py-2 bg-[#ffa12a] hover:bg-[#ff9011] text-white font-semibold rounded-lg transition-colors duration-300">
+                                Agendar Llamada
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-left opacity-0 [--animation-delay:600ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="w-16 h-16 bg-[#ffa12a]/10 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffa12a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold dark:text-white text-center">Centro de Ayuda</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-center">Encuentra respuestas rápidas en nuestra sección de preguntas frecuentes</p>
+                            <a href="/contact-us#faqs-section" class="mt-4 px-6 py-2 border-2 border-[#ffa12a] text-[#ffa12a] hover:bg-[#ffa12a] hover:text-white font-semibold rounded-lg transition-all duration-300">
+                                Ver FAQ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Container>
+    </section>
+</Layout>
+
+<script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => {
+                btn.classList.remove('bg-[#ffa12a]', 'text-white');
+                btn.classList.add('text-[#ffa12a]');
+            });
+
+            // Add active class to clicked button
+            button.classList.remove('text-[#ffa12a]');
+            button.classList.add('bg-[#ffa12a]', 'text-white');
+
+            const filter = button.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                if (filter === 'Todos' || card.getAttribute('data-type') === filter) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+</script>

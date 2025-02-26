@@ -1,0 +1,98 @@
+---
+import Layout from '../ui/layouts/Layout.astro';
+import Button from '../ui/components/Button.astro';
+import Container from '../ui/components/Container.astro';
+import lacerna from '../assets/img/lacerna.jpg'
+import prodesa from '../assets/img/prodesa.png'
+import bogota2 from '../assets/img/bogota2.jpg'
+---
+
+<Layout>
+    <section class="relative pt-[116px] dark:bg-gray-900 lg:min-h-[740px] px-4 lg:px-6">
+        <div class="absolute top-0 z-10 left-0 w-full h-full bg-black/50"></div>
+        <img class="absolute top-0 left-0 w-full h-full object-cover blur-sm" src={bogota2.src} alt="Red de Aliados">
+        <Container className="relative z-10 flex items-center justify-center text-center min-h-[600px]">
+            <div class="w-full lg:w-2/3 flex flex-col gap-8 items-center">
+                <h1 class="text-5xl lg:text-7xl font-bold text-white animate-fade-up opacity-0" style="animation-delay: 0.2s;">
+                    Nuestra Red de <span class="text-[#ffa12a]">Aliados</span>
+                </h1>
+                <p class="text-lg lg:text-2xl text-white animate-fade-up opacity-0" style="animation-delay: 0.4s;">
+                    Colaboramos con empresas, instituciones y profesionales del sector para 
+                    desarrollar proyectos urbanos innovadores y sostenibles.
+                </p>
+                <Button href="about-us" class="animate-fade-up opacity-0" style="animation-delay: 0.6s;">Conócenos</Button>
+            </div>
+        </Container>
+    </section>
+
+    <section class="h-auto dark:bg-gray-800">
+        <section class="flex flex-col items-center lg:flex-row gap-20 py-10 lg:py-20 px-4 lg:px-6 max-w-screen-xl mx-auto">
+            <div class="w-full flex flex-col lg:flex-row items-center gap-10 pb-20 xl:pb-0 animate-fade-up opacity-0">
+                <div class="w-full lg:w-3/5">
+                    <h1 class="text-3xl lg:text-5xl font-bold dark:text-white mb-6 leading-tight animate-fade-up opacity-0">
+                        Alianzas que <span class="text-[#ffa12a]">Impulsan el Desarrollo</span>
+                    </h1>
+                    <p class="text-lg lg:text-xl dark:text-white text-gray-700 leading-relaxed animate-fade-up opacity-0">
+                        Trabajamos con entidades gubernamentales, empresas de construcción, consultoras en gestión urbana y organizaciones financieras 
+                        para desarrollar proyectos innovadores y sostenibles que transforman ciudades.
+                    </p>
+                </div>
+                <div class="w-full lg:w-2/5 flex flex-col sm:flex-row gap-4">
+                    <div class="w-full sm:w-1/2 p-6 bg-[#ffa12a] rounded-xl hover:bg-[#ff9011] transition-colors duration-300 animate-fade-up opacity-0">
+                        <p class="text-5xl font-bold text-white mb-2">15+</p>
+                        <p class="font-medium text-white/90">Empresas Constructoras</p>
+                    </div>
+                    <div class="w-full sm:w-1/2 p-6 bg-[#ffa12a] rounded-xl hover:bg-[#ff9011] transition-colors duration-300 animate-fade-up opacity-0">
+                        <p class="text-5xl font-bold text-white mb-2">10+</p>
+                        <p class="font-medium text-white/90">Aliados Financieros</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="h-auto lg:min-h-[calc(100vh-116px)] dark:bg-gray-900 bg-[#f5f5f5] py-10 lg:py-0">
+        <Container className="flex flex-col justify-center gap-10 py-0 pb-10 lg:py-20 px-4 lg:px-6">
+            <div class="text-center max-w-4xl mx-auto mb-12 animate-fade-up opacity-0">
+                <h1 class="text-2xl lg:text-5xl font-black dark:text-white mb-4">Nuestros Aliados</h1>
+                <p class="text-lg lg:text-xl font-medium dark:text-white text-gray-600">
+                    La sinergia con nuestros aliados estratégicos nos permite diseñar y ejecutar soluciones urbanas con un impacto positivo y duradero.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <a target="_blank" href="https://www.lasernaybaron.com/" class="cursor-pointer relative group rounded-xl shadow-lg overflow-hidden bg-white border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="flex justify-center items-center h-[200px] bg-white p-4">
+                        <img src={lacerna.src} class="max-h-full max-w-full object-contain" alt="Constructora Andina">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+                        <h3 class="text-lg font-bold text-white">LASERNA & BARÓN</h3>
+                    </div>
+                </a>
+                
+                <a target="_blank" href="https://prodesa.com/" class="cursor-pointer relative group rounded-xl shadow-lg overflow-hidden bg-white border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="flex justify-center items-center h-[200px] bg-white p-4">
+                        <img src={prodesa.src} class="max-h-full max-w-full object-contain" alt="Financiera Urbana">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+                        <h3 class="text-lg font-bold text-white">PRODESA</h3>
+                    </div>
+                </a>
+            </div>
+            
+        </Container>
+    </section>
+
+    <section class="h-auto dark:bg-gray-900 py-20 lg:py-0">
+        <Container className="flex flex-col justify-center gap-10 items-center px-4 lg:px-6 py-32">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-3xl lg:text-5xl font-black bg-gradient-to-r from-[#ffa12a] to-[#ff9011] text-transparent bg-clip-text mb-6">
+                    ¿Quieres ser nuestro aliado?
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">
+                    Contáctanos y descubre cómo podemos trabajar juntos para transformar el desarrollo urbano con soluciones estratégicas.
+                </p>
+                <Button href="contact-us">Únete a Nuestra Red</Button>
+            </div>
+        </Container>
+    </section>
+</Layout>

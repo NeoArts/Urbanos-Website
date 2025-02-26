@@ -1,0 +1,113 @@
+---
+import Layout from '../ui/layouts/Layout.astro';
+import Container from '../ui/components/Container.astro';
+---
+<Layout>
+    <!-- Hero Section -->
+    <section class="relative pt-[116px] bg-black dark:bg-gray-900 px-4 lg:px-6">
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/30"></div>
+        <section class="relative z-10 flex flex-col justify-center items-center text-center py-24 max-w-4xl mx-auto">
+            <h1 class="text-5xl lg:text-7xl font-black text-white mb-6 animate-fade-up opacity-0 [--animation-delay:200ms]">Política de Cookies</h1>
+            <p class="text-lg lg:text-xl text-white/90 animate-fade-up opacity-0 [--animation-delay:400ms]">
+                Última actualización: <span class="font-semibold">[Fecha de actualización]</span>
+            </p>
+        </section>
+    </section>
+
+    <!-- Cookies Policy Content -->
+    <section class="h-auto bg-white dark:bg-gray-800 py-16">
+        <Container className="max-w-4xl mx-auto px-4 lg:px-6 space-y-6">
+            
+            <!-- Accordion Sections -->
+            <div class="space-y-4">
+                <details class="group border-b border-gray-300 dark:border-gray-600 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-[#ffa12a] dark:text-white">
+                        1. ¿Qué son las Cookies?
+                        <span class="transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">
+                        Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas nuestro sitio web. Estas permiten mejorar la experiencia del usuario y ofrecer servicios personalizados.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-300 dark:border-gray-600 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-[#ffa12a] dark:text-white">
+                        2. ¿Cómo usamos las Cookies?
+                        <span class="transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">
+                        Utilizamos cookies para mejorar la funcionalidad de nuestro sitio web, analizar el tráfico, recordar tus preferencias y optimizar la experiencia de navegación.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-300 dark:border-gray-600 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-[#ffa12a] dark:text-white">
+                        3. Tipos de Cookies que Utilizamos
+                        <span class="transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">
+                        <strong>Cookies esenciales:</strong> Necesarias para el funcionamiento del sitio web.  
+                        <br><strong>Cookies de rendimiento:</strong> Nos ayudan a mejorar el sitio analizando su uso.  
+                        <br><strong>Cookies de funcionalidad:</strong> Guardan preferencias del usuario.  
+                        <br><strong>Cookies de terceros:</strong> Usadas para publicidad y análisis por proveedores externos.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-300 dark:border-gray-600 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-[#ffa12a] dark:text-white">
+                        4. ¿Cómo Gestionar las Cookies?
+                        <span class="transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">
+                        Puedes gestionar o eliminar cookies desde la configuración de tu navegador. Si decides bloquear algunas cookies, la experiencia del sitio puede verse afectada.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-300 dark:border-gray-600 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-[#ffa12a] dark:text-white">
+                        5. Cambios en la Política de Cookies
+                        <span class="transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">
+                        Nos reservamos el derecho de actualizar nuestra política de cookies en cualquier momento. Recomendamos revisar esta página periódicamente para estar informado.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-300 dark:border-gray-600 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold text-[#ffa12a] dark:text-white">
+                        6. Información de Contacto
+                        <span class="transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-gray-700 dark:text-gray-300 mt-2 leading-relaxed">
+                        Si tienes preguntas sobre nuestra política de cookies, puedes contactarnos a través de:
+                    </p>
+                    <ul class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4 space-y-2">
+                        <li><strong>Ubicación:</strong> Carrera 13 # 32-93 oficina 418 torre 3, Bogotá, Colombia</li>
+                        <li><strong>Email:</strong> <a href="mailto:urbanoszcc@zonaurbanos.com" class="text-[#ffa12a] hover:underline">urbanoszcc@zonaurbanos.com</a></li>
+                        <li><strong>Teléfono:</strong> <a href="tel:+576017911737" class="text-[#ffa12a] hover:underline">+57 601-7911737</a></li>
+                    </ul>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                        <strong>Horario de Atención:</strong>
+                    </p>
+                    <ul class="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">
+                        <li>Lunes a Viernes: 8:00 AM - 6:00 PM</li>
+                        <li>Sábados: 9:00 AM - 1:00 PM</li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center pt-16">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">¿Tienes dudas sobre el uso de cookies?</h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">Nuestro equipo está disponible para brindarte más información.</p>
+                <a href="/contacto" class="inline-flex items-center px-8 py-4 bg-[#ffa12a] text-white font-semibold rounded-lg hover:bg-[#ff9011] transition-all duration-300 hover:shadow-lg">
+                    Contáctanos
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+
+        </Container>
+    </section>
+</Layout>

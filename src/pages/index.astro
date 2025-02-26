@@ -1,11 +1,310 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '../ui/layouts/Layout.astro';
+import Button from '../ui/components/Button.astro';
+import Container from '../ui/components/Container.astro';
+import bogota from '../assets/img/bogota.jpg'
+import ProjectsGrid from '../ui/components/ProjectsGrid.astro';
+import img_home_1 from '../assets/img/img_home_1.jpg'
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const projects = [
+    {
+        id: 1,
+        title: "Ciudadela San Juan Bosco",
+        type: "Desarrollo",
+        description: "Desarrollo de vivienda, comercio y equipamientos institucionales.",
+        location: "Bogotá",
+        year: "2023",
+        image: img_home_1,
+        slug: "ciudadela-san-juan-bosco"
+    },
+    {
+        id: 2,
+        title: "Ciudad La Salle",
+        type: "Desarrollo",
+        description: "Proyecto de renovación urbana con usos mixtos, incluyendo vivienda, comercio y educación.",
+        location: "Bogotá",
+        year: "2024",
+        image: img_home_1,
+        slug: "ciudad-la-salle"
+    },
+    {
+        id: 3,
+        title: "Plan Parcial Tintalito - Mazuera",
+        type: "Desarrollo",
+        description: "Desarrollo urbano planificado.",
+        location: "Bogotá",
+        year: "2023",
+        image: img_home_1,
+        slug: "plan-parcial-tintalito-mazuera"
+    },
+];
 ---
 
 <Layout>
-	<Welcome />
+	<section class="relative pt-[116px] dark:bg-gray-900 lg:min-h-[740px] px-4 lg:px-6">
+		<div class="absolute top-0 z-10 left-0 w-full h-full bg-gradient-to-r from-black via-black/70 to-black/20"></div>
+		<img class="absolute top-0 left-0 w-full h-full object-cover" src={bogota.src} alt="">
+		<Container className="relative z-10 xl:h-[calc(120vh-340px)] flex items-center max-h-[920px] lg:min-h-[540px] my-8 xl:-my-10">
+			<div class="w-full flex flex-col px-0 animate-fade-in pb-20 lg:pb-0">
+				<div class="w-full lg:w-1/2 flex flex-col gap-10 items-start">
+					<h1 class="text-5xl lg:text-7xl font-bold text-white animate-fade-up opacity-0" style="animation-delay: 0.2s; animation-fill-mode: forwards;">Desarrollo Renovación urbana</h1>
+					<p class="font-semibold text-xl text-white animate-fade-up opacity-0" style="animation-delay: 0.4s; animation-fill-mode: forwards;">Asesoramos y transformamos terrenos en activos de alto valor a través de estrategias personalizadas y cumplimiento normativo.</p>
+					<div class="animate-fade-up opacity-0" style="animation-delay: 0.6s; animation-fill-mode: forwards;">
+						<Button href="contact-us">Contacto</Button>
+					</div>
+				</div>
+				<div class="w-1/2">
+					
+				</div>
+			</div>
+		</Container>
+		
+	</section>
+	<section class="h-auto dark:bg-gray-800">
+		<section class="flex flex-col items-center lg:flex-row gap-20 py-10 lg:py-20 px-4 lg:px-6 max-w-screen-xl mx-auto">
+			<div class="w-full flex flex-col lg:flex-row items-center gap-10 pb-20 xl:pb-0 animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+				<div class="w-full lg:w-3/5">
+					<h1 class="text-3xl lg:text-5xl font-bold dark:text-white mb-6 leading-tight animate-fade-up opacity-0 [--animation-delay:400ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">Transformamos Espacios, <span class="text-[#ffa12a]">Creamos Oportunidades</span></h1>
+					<p class="text-lg lg:text-xl dark:text-white text-gray-700 leading-relaxed animate-fade-up opacity-0 [--animation-delay:600ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">Somos especialistas en gestión urbana, planeación territorial y estructuración de proyectos inmobiliarios. Nuestra experiencia abarca desde la formulación de planes parciales hasta la supervisión técnica de obras, garantizando desarrollo sostenible, cumplimiento normativo e innovación en cada proyecto.</p>
+				</div>
+				<div class="w-full lg:w-2/5 flex flex-col sm:flex-row gap-4">
+					<div class="w-full sm:w-1/3 p-6 bg-[#ffa12a] rounded-xl hover:bg-[#ff9011] transition-colors duration-300 animate-fade-up opacity-0 [--animation-delay:800ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+						<p class="text-5xl font-bold text-white mb-2">50+</p>
+						<p class="font-medium text-white/90">Proyectos Exitosos Completados</p>
+					</div>
+					<div class="w-full sm:w-1/3 p-6 bg-[#ffa12a] rounded-xl hover:bg-[#ff9011] transition-colors duration-300 animate-fade-up opacity-0 [--animation-delay:1000ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+						<p class="text-5xl font-bold text-white mb-2">30+</p>
+						<p class="font-medium text-white/90">Clientes Corporativos Satisfechos</p>
+					</div>
+					<div class="w-full sm:w-1/3 p-6 bg-[#ffa12a] rounded-xl hover:bg-[#ff9011] transition-colors duration-300 animate-fade-up opacity-0 [--animation-delay:1200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+						<p class="text-5xl font-bold text-white mb-2">20+</p>
+						<p class="font-medium text-white/90">Años de Experiencia y Liderazgo</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<section class="h-auto lg:min-h-[calc(100vh-116px)] dark:bg-gray-800 bg-[#f5f5f5] py-10 lg:py-0">
+		<Container className="flex flex-col justify-center gap-10 py-0 pb-10 lg:py-20 px-4 lg:px-6">
+			<div class="text-center max-w-4xl mx-auto mb-12 animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+				<h1 class="text-2xl lg:text-5xl font-black dark:text-white mb-4">Portafolio de Excelencia</h1>
+				<p class="text-lg lg:text-xl font-medium dark:text-white text-gray-600">Exploramos nuevas fronteras en la planificación urbana y el desarrollo inmobiliario, llevando a cabo proyectos estratégicos que transforman las ciudades. Cada obra es un testimonio de nuestra visión, compromiso y experiencia en el sector.</p>
+			</div>
+			<ProjectsGrid projects={projects} />
+			<div class="flex justify-center mt-10 animate-fade-up opacity-0 [--animation-delay:1200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+				<a href="/projects" class="group inline-flex items-center px-8 py-4 bg-[#ffa12a] text-white font-semibold rounded-lg hover:bg-[#ff9011] transition-all duration-300 hover:shadow-lg">
+					Explorar Todos los Proyectos
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+						<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+					</svg>
+				</a>
+			</div>
+		</Container>
+	</section>
+	<section class="h-auto lg:min-h-[calc(100vh-116px)] dark:bg-gray-900 py-20 pb-10 lg:py-0">
+		<Container className="flex flex-col justify-center gap-10 px-4 lg:px-6 pt-0 lg:pt-20 pb-10">
+			<div class="text-center max-w-3xl mx-auto animate-fade-down opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]"> 
+				<h1 class="text-2xl lg:text-4xl font-black dark:text-white mb-5">¿Por Qué Elegir Urbanos?</h1> 
+				<p class="text-gray-600 dark:text-gray-300 mb-10">Lideramos la transformación del territorio con soluciones integrales, respaldadas por un equipo altamente calificado y un enfoque estratégico que optimiza cada desarrollo.</p> 
+			</div>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-20">
+				<div class="p-6 bg-[#ffa12a]/10 hover:bg-[#ffa12a]/20 transition-colors duration-300 rounded-xl animate-fade-up opacity-0 [--animation-delay:400ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+					<div class="flex items-start gap-4">
+						<div class="p-3 bg-[#ffa12a]/20 rounded-xl">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffa12a]">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+								<path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+								<path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
+								<path d="M15 19l2 2l4 -4"></path>
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold mb-3">Asesoría Estratégica</h3>
+							<p class="font-medium text-gray-700 dark:text-gray-800 leading-relaxed">Accede al conocimiento experto en gestión de suelo, normativas urbanas y estructuración financiera para maximizar el potencial de tu propiedad.</p>
+						</div>
+					</div>
+				</div>
+				<div class="p-6 bg-[#ffa12a]/10 hover:bg-[#ffa12a]/20 transition-colors duration-300 rounded-xl animate-fade-up opacity-0 [--animation-delay:600ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+					<div class="flex items-start gap-4">
+						<div class="p-3 bg-[#ffa12a]/20 rounded-xl">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffa12a]">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+								<path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold mb-3">Soluciones Personalizadas</h3>
+							<p class="font-medium text-gray-700 dark:text-gray-800 leading-relaxed">Diseñamos estrategias adaptadas a las necesidades específicas de cada proyecto, asegurando su viabilidad y éxito.</p>
+						</div>
+					</div>
+				</div>
+				<div class="p-6 bg-[#ffa12a]/10 hover:bg-[#ffa12a]/20 transition-colors duration-300 rounded-xl animate-fade-up opacity-0 [--animation-delay:800ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+					<div class="flex items-start gap-4">
+						<div class="p-3 bg-[#ffa12a]/20 rounded-xl">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffa12a]">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+								<path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1"></path>
+								<path d="M9 12l2 2l4 -4"></path>
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold mb-3">Transparencia y Eficiencia</h3>
+							<p class="font-medium text-gray-700 dark:text-gray-800 leading-relaxed">Garantizamos procesos claros y bien estructurados, cumpliendo con los más altos estándares técnicos y normativos.</p>
+						</div>
+					</div>
+				</div>
+				<div class="p-6 bg-[#ffa12a]/10 hover:bg-[#ffa12a]/20 transition-colors duration-300 rounded-xl animate-fade-up opacity-0 [--animation-delay:1000ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+					<div class="flex items-start gap-4">
+						<div class="p-3 bg-[#ffa12a]/20 rounded-xl">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffa12a]">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+								<path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+								<path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5"></path>
+								<path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73"></path>
+								<path d="M6 9l12 0"></path>
+								<path d="M6 12l3 0"></path>
+								<path d="M6 15l2 0"></path>
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-2xl font-bold mb-3">Acompañamiento Integral</h3>
+							<p class="font-medium text-gray-700 dark:text-gray-800 leading-relaxed">Desde la conceptualización hasta la ejecución y supervisión técnica, nuestro equipo te guía en cada etapa del proyecto.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Container>
+	</section>
+	<section class="h-auto lg:h-[calc(100vh-116px)] bg-[#fff8f2] dark:bg-gray-900 py-10 lg:py-0">
+		<Container className="flex flex-col justify-center gap-10 px-4 lg:px-6 pb-10 pt-10 xl:pt-0">
+			<div class="text-center max-w-3xl mx-auto animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+				<h1 class="text-2xl lg:text-4xl font-black dark:text-white mb-5">Testimonios de Nuestros Clientes</h1>
+				<p class="text-gray-600 dark:text-gray-300 mb-10">Descubre por qué empresas y propietarios confían en nosotros para desarrollar proyectos urbanísticos innovadores y sostenibles.</p>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<div class="bg-[#ffa12a]/10 hover:bg-[#ffa12a]/20 transition-all duration-300 rounded-2xl animate-fade-up opacity-0 [--animation-delay:400ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+					<div class="p-6">
+						<div class="flex items-center gap-2 mb-4">
+							<div class="w-12 h-12 bg-[#ffa12a]/20 rounded-full flex items-center justify-center">
+								<span class="text-xl font-bold text-[#ffa12a]">JD</span>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold">Juan Diego Ramírez</h3>
+								<p class="text-gray-600 dark:text-gray-400 text-sm">Bogotá</p>
+							</div>
+						</div>
+						<div class="flex items-center gap-1 mb-3">
+							<span class="text-[#ffa12a]">★★★★★</span>
+							<span class="text-sm font-semibold ml-2">4.8</span>
+						</div>
+						<p class="text-gray-700 dark:text-gray-300 leading-relaxed">"Excelente servicio y profesionalismo. El equipo de Urbanos superó todas nuestras expectativas en el desarrollo de nuestro proyecto inmobiliario."</p>
+					</div>
+				</div>
+
+				<div class="bg-[#ffa12a]/10 hover:bg-[#ffa12a]/20 transition-all duration-300 rounded-2xl animate-fade-up opacity-0 [--animation-delay:600ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+					<div class="p-6">
+						<div class="flex items-center gap-2 mb-4">
+							<div class="w-12 h-12 bg-[#ffa12a]/20 rounded-full flex items-center justify-center">
+								<span class="text-xl font-bold text-[#ffa12a]">MC</span>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold">María Camila Ortiz</h3>
+								<p class="text-gray-600 dark:text-gray-400 text-sm">Bogotá</p>
+							</div>
+						</div>
+						<div class="flex items-center gap-1 mb-3">
+							<span class="text-[#ffa12a]">★★★★★</span>
+							<span class="text-sm font-semibold ml-2">5.0</span>
+						</div>
+						<p class="text-gray-700 dark:text-gray-300 leading-relaxed">"La atención personalizada y el conocimiento técnico del equipo fueron fundamentales para el éxito de nuestro proyecto residencial."</p>
+					</div>
+				</div>
+
+				<div class="bg-[#ffa12a]/10 hover:bg-[#ffa12a]/20 transition-all duration-300 rounded-2xl animate-fade-up opacity-0 [--animation-delay:800ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+					<div class="p-6">
+						<div class="flex items-center gap-2 mb-4">
+							<div class="w-12 h-12 bg-[#ffa12a]/20 rounded-full flex items-center justify-center">
+								<span class="text-xl font-bold text-[#ffa12a]">AV</span>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold">Andrés Velásquez</h3>
+								<p class="text-gray-600 dark:text-gray-400 text-sm">Medellín</p>
+							</div>
+						</div>
+						<div class="flex items-center gap-1 mb-3">
+							<span class="text-[#ffa12a]">★★★★★</span>
+							<span class="text-sm font-semibold ml-2">4.5</span>
+						</div>
+						<p class="text-gray-700 dark:text-gray-300 leading-relaxed">"Su experiencia en planificación urbana y compromiso con la calidad hicieron que todo el proceso fuera fluido y exitoso."</p>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="mt-8 animate-fade-up opacity-0 [--animation-delay:1000ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+				<div class="flex justify-center gap-4">
+					<button class="w-12 h-12 bg-[#ffa12a] hover:bg-[#ff9011] transition-colors duration-300 rounded-full flex justify-center items-center cursor-pointer text-white">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+					</button>
+					<button class="w-12 h-12 bg-[#ffa12a] hover:bg-[#ff9011] transition-colors duration-300 rounded-full flex justify-center items-center cursor-pointer text-white">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+					</button>
+				</div>
+			</div> -->
+		</Container>
+	</section>
+	<section class="h-auto lg:min-h-[calc(100vh-116px)] dark:bg-gray-800 py-20 lg:py-0">
+		<Container className="flex flex-col justify-center gap-10 items-center px-4 lg:px-6 py-32 overflow-hidden lg:overflow-visible">
+			<div class="text-center max-w-4xl mx-auto">
+				<h1 class="text-3xl lg:text-5xl font-black bg-gradient-to-r from-[#ffa12a] to-[#ff9011] text-transparent bg-clip-text mb-6 animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">¿Tienes Preguntas? Estamos para Ayudarte</h1>
+				<p class="text-lg text-gray-600 dark:text-gray-300 mb-12 animate-fade-up opacity-0 [--animation-delay:400ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">Nuestro equipo de expertos está listo para brindarte la mejor asesoría en planificación y gestión urbana.</p>
+				
+				<div class="grid md:grid-cols-2 gap-8 mb-12">
+					<div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-right opacity-0 [--animation-delay:600ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="w-16 h-16 bg-[#ffa12a]/10 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffa12a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold dark:text-white text-center">Consulta con Expertos</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-center">Agenda una llamada personalizada con nuestros especialistas en urbanismo</p>
+                            <a href="contact-us" class="mt-4 px-6 py-2 bg-[#ffa12a] hover:bg-[#ff9011] text-white font-semibold rounded-lg transition-colors duration-300">
+                                Agendar Llamada
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-left opacity-0 [--animation-delay:600ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal] [transform-style:preserve-3d]">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="w-16 h-16 bg-[#ffa12a]/10 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffa12a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold dark:text-white text-center">Centro de Ayuda</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-center">Encuentra respuestas rápidas en nuestra sección de preguntas frecuentes</p>
+                            <a href="/contact-us#faqs-section" class="mt-4 px-6 py-2 border-2 border-[#ffa12a] text-[#ffa12a] hover:bg-[#ffa12a] hover:text-white font-semibold rounded-lg transition-all duration-300">
+                                Ver FAQ
+                            </a>
+                        </div>
+                    </div>
+				</div>
+
+				<div class="bg-gradient-to-r from-[#ffa12a]/10 to-[#ff9011]/10 rounded-2xl p-8 animate-fade-up opacity-0 [--animation-delay:800ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal] [transform-style:preserve-3d]">
+					<h3 class="text-xl font-bold dark:text-white mb-6">Mantente Informado</h3>
+					<form class="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
+						<input 
+							type="email" 
+							placeholder="Tu correo electrónico" 
+							class="flex-1 px-6 py-3 rounded-lg border-2 border-[#ffa12a]/20 focus:border-[#ffa12a] focus:outline-none bg-white dark:bg-gray-700 dark:text-white"
+						/>
+						<button class="px-8 py-3 bg-[#ffa12a] hover:bg-[#ff9011] text-white font-semibold rounded-lg transition-colors duration-300">
+							Suscribirse
+						</button>
+					</form>
+				</div>
+			</div>
+		</Container>
+	</section>
 </Layout>

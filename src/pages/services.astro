@@ -1,0 +1,237 @@
+---
+import Layout from '../ui/layouts/Layout.astro';
+import Container from '../ui/components/Container.astro';
+import bogota2 from '../assets/img/bogota2.jpg';
+import design from '../assets/img/design.jpg'
+import consultancy from '../assets/img/consultancy.jpg'
+import planning from '../assets/img/planning.jpg'
+import development from '../assets/img/development.jpg'
+import bogota3 from '../assets/img/bogota3.jpg'
+---
+
+<Layout>
+    <section class="relative pt-[116px] dark:bg-gray-900 lg:min-h-[740px] px-4 lg:px-6">
+        <div class="absolute top-0 z-10 left-0 w-full h-full bg-gradient-to-r from-black via-black/70 to-black/20"></div>
+        <img class="absolute top-0 left-0 w-full h-full object-cover" src={bogota2.src} alt="Bogotá">
+        <Container className="relative z-10 xl:h-[calc(120vh-340px)] flex items-center max-h-[920px] lg:min-h-[540px] my-8 xl:-my-10">
+            <div class="w-full flex flex-col px-0 animate-fade-in pb-20 lg:pb-0">
+                <div class="w-full lg:w-1/2 flex flex-col gap-10 items-start">
+                    <h1 class="text-5xl lg:text-7xl font-bold text-white animate-fade-up opacity-0" style="animation-delay: 0.2s; animation-fill-mode: forwards;">Nuestros Servicios</h1>
+                    <p class="font-semibold text-xl text-white animate-fade-up opacity-0" style="animation-delay: 0.4s; animation-fill-mode: forwards;">Soluciones integrales en planeación y gestión urbana para el desarrollo sostenible del territorio</p>
+                </div>
+                <div class="w-1/2">
+                </div>
+            </div>
+        </Container>
+    </section>
+    
+    <section class="py-20 dark:bg-gray-800">
+        <Container className="px-4 lg:px-6">
+            <div id="consultoria_gestion_urbana" class="grid lg:grid-cols-2 gap-16 items-center mb-32">
+                <div class="animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <h2 class="text-3xl lg:text-4xl font-bold dark:text-white mb-6">Consultoría y Gestión Urbana</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        Brindamos asesoramiento estratégico en la estructuración y ejecución de proyectos urbanos, asegurando su viabilidad normativa y financiera.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Formulación y gestión de planes parciales de desarrollo y renovación urbana
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Planes de implantación, regularización y manejo
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Análisis normativo y urbanístico
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Gestión de trámites y licencias
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Estructuración de proyectos inmobiliarios
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative h-[400px] rounded-xl overflow-hidden animate-fade-up opacity-0 [--animation-delay:400ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <img src={consultancy.src} alt="Consultoría Urbana" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <div id="diseno_desarrollo_urbana" class="grid lg:grid-cols-2 gap-16 items-center mb-32">
+                <div class="order-2 lg:order-1 relative h-[400px] rounded-xl overflow-hidden animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <img src={design.src} alt="Diseño de Espacios" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="order-1 lg:order-2 animate-fade-up opacity-0 [--animation-delay:400ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <h2 class="text-3xl lg:text-4xl font-bold dark:text-white mb-6">Diseño y Desarrollo de Espacios Urbanos</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        Creamos soluciones arquitectónicas que transforman el entorno con criterios de sostenibilidad y funcionalidad.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Diseño arquitectónico sostenible
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Optimización de espacios urbanos
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Integración con el entorno urbano
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Estudios técnicos y de prefactibilidad
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="planificacion_estrategica_mercado" class="grid lg:grid-cols-2 gap-16 items-center mb-32">
+                <div class="animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <h2 class="text-3xl lg:text-4xl font-bold dark:text-white mb-6">Planificación Estratégica y Estudios de Mercado</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        Desarrollamos estrategias para garantizar el éxito de los proyectos desde su concepción hasta su ejecución.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Estudios de factibilidad y viabilidad económica
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Análisis de mercado y demanda inmobiliaria
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Gestión de riesgos y evaluación financiera
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Modelos de negocio y estructuración financiera de proyectos urbanos
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative h-[400px] rounded-xl overflow-hidden animate-fade-up opacity-0 [--animation-delay:400ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <img src={planning.src} alt="Planificación Estratégica" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <div id="interventoria_supervision_tecnica" class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative h-[400px] rounded-xl overflow-hidden animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <img src={development.src} alt="Sostenibilidad" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="order-1 lg:order-2 animate-fade-up opacity-0 [--animation-delay:400ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <h2 class="text-3xl lg:text-4xl font-bold dark:text-white mb-6">Interventoría y Supervisión Técnica</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        Aseguramos la correcta ejecución de obras urbanas y arquitectónicas mediante control técnico y normativo.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Supervisión y auditoría de procesos constructivos
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Revisión de diseños y especificaciones técnicas
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Gestión de calidad en obras civiles y arquitectónicas
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Cumplimiento de normativas urbanas y ambientales
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="desarrollo_urbano_sostenible" class="grid lg:grid-cols-2 gap-16 items-center mt-32">
+                <div class="animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <h2 class="text-3xl lg:text-4xl font-bold dark:text-white mb-6">Desarrollo Urbano Sostenible</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        Implementamos estrategias de sostenibilidad para optimizar el uso del suelo y minimizar impactos ambientales.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Certificaciones ambientales y eficiencia energética
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Gestión de recursos y materiales sostenibles
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#ffa12a]" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Planes de mitigación ambiental y movilidad urbana
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative h-[400px] rounded-xl overflow-hidden animate-fade-up opacity-0 [--animation-delay:400ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                    <img src={bogota3.src} alt="Planificación Estratégica" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+        </Container>
+    </section>
+    <section class="dark:bg-gray-800 py-20">
+        <section class="px-4 lg:px-6">
+            <div class="text-center max-w-3xl mx-auto animate-fade-up opacity-0 [--animation-delay:200ms] [view-timeline-name:--reveal] [animation-range:entry_20%_cover_30%] [animation-timeline:--reveal]">
+                <h2 class="text-3xl lg:text-4xl font-bold dark:text-white mb-6">¿Listo para transformar tu proyecto urbano?</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                    Contáctanos para una consulta personalizada y descubre cómo maximizar el potencial de tu activo inmobiliario.
+                </p>
+                <a href="/contacto" class="inline-flex items-center px-8 py-4 bg-[#ffa12a] text-white font-semibold rounded-lg hover:bg-[#ff9011] transition-all duration-300 hover:shadow-lg">
+                    Solicitar Asesoría
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </section>
+</Layout>
