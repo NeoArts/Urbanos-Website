@@ -8,9 +8,10 @@ import Footer from '../components/Footer.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logo_urbanos.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Urbanos Zonas de Construcción SAS</title>
+  
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +27,21 @@ import Footer from '../components/Footer.astro';
 		<slot/>
 		<Footer/>
 		<script>
-			if (window.location.pathname !== '/projects' && window.location.pathname !== '/contact-us') {
+			const hamburger = document.querySelector('[data-collapse-toggle="mobile-menu-2"]');
+			const header = document.querySelector('header nav');
+
+			hamburger?.addEventListener('click', () => {
+				const mobileMenu = document.getElementById('mobile-menu-2');
+				if (!mobileMenu?.classList.contains('hidden')) {
+					header?.classList.remove('bg-black');
+					header?.classList.add('bg-transparent');
+				} else {
+					header?.classList.remove('bg-transparent');
+					header?.classList.add('bg-black');
+				}
+			});
+			console.log(window.location.pathname);
+			if (!window.location.pathname.includes('projects') && !window.location.pathname.includes('contact-us')) {
 				window.addEventListener('scroll', () => {
 					const navLinks = document.querySelectorAll('.nav-link');
 					const headerLogo = document.getElementById('headerLogo');
@@ -34,6 +49,8 @@ import Footer from '../components/Footer.astro';
 					const hamburgerButton = document.querySelector('[data-collapse-toggle="mobile-menu-2"]');
 					const scrolled = window.scrollY > (window.innerHeight - 100);
 					const atTop = window.scrollY === 0;
+					const mobileMenu = document.getElementById('mobile-menu-2');
+					
 					
 					navLinks.forEach(link => {
 						if (scrolled) {
@@ -58,7 +75,7 @@ import Footer from '../components/Footer.astro';
 						hamburgerButton?.classList.remove('text-black');
 						hamburgerButton?.classList.add('text-white');
 						header?.classList.remove('bg-white', 'border-b', 'border-gray-200');
-						if (atTop) {
+						if (atTop && mobileMenu?.classList.contains('hidden')) {
 							header?.classList.remove('bg-black');
 							header?.classList.add('bg-transparent');
 						} else {
@@ -80,6 +97,7 @@ import Footer from '../components/Footer.astro';
 				});
 
 				headerLogo?.classList.remove('text-white');
+				if (headerLogo) headerLogo.style.color = 'black';
 				headerLogo?.classList.add('text-black');
 				hamburgerButton?.classList.remove('text-white');
 				hamburgerButton?.classList.add('text-black');
